@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+
+  mongo-cluster:
+    scale: 3
+    retain_ip: true
+    metadata:
+      mongo:
+        yml:
+          replset.name: "${replset_name}"
